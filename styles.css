@@ -19,15 +19,14 @@ body.dark-mode {
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 h1 {
@@ -36,13 +35,30 @@ h1 {
     color: #f5f5f5;
 }
 
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    background-image: url(''); /* Adicione a URL da sua foto aqui */
+    background-size: cover;
+    background-position: center;
+}
+
+.link-tree {
+    margin-top: 200px; /* Para considerar o cabeçalho fixo */
+}
+
 .link-tree .btn {
     background: transparent;
     border: 2px solid #00FFFF; /* Neon color */
     color: #00FFFF;
     font-size: 1.2rem;
     transition: all 0.3s ease;
-    width: auto;
+    width: 200px;
+    margin: 0 auto;
+    display: block;
 }
 
 .link-tree .btn:hover {
@@ -86,8 +102,14 @@ h1 {
         font-size: 2rem;
     }
 
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+    }
+
     .link-tree .btn {
         font-size: 1rem;
         padding: 0.75rem 1.25rem;
+        width: 100%;
     }
 }
