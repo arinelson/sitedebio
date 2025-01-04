@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Alterna entre modo escuro e claro
     const toggleModeBtn = document.getElementById('toggle-mode');
     const modeIcon = document.getElementById('mode-icon');
 
@@ -17,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Efeito giratório na foto de perfil
     const profilePic = document.querySelector('.profile-pic');
     profilePic.addEventListener('mouseenter', function() {
         gsap.to(profilePic, { rotation: 360, duration: 1 });
@@ -26,6 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         gsap.to(profilePic, { rotation: 0, duration: 1 });
     });
 
+    // Efeito de clique nos links
     const links = document.querySelectorAll('.neon-button');
     links.forEach(link => {
         link.addEventListener('click', function(event) {
@@ -35,6 +38,22 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.open(link.href, '_blank');
                 link.classList.remove('neon-button-active');
             }, 500);
+        });
+    });
+
+    // Animação de entrada suave
+    gsap.from('header', { opacity: 0, y: -50, duration: 1 });
+    gsap.from('.link-tree a', { opacity: 0, y: 50, duration: 1, stagger: 0.2 });
+
+    // Scroll suave para âncoras
+    const anchors = document.querySelectorAll('a[href^="#"]');
+    anchors.forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                gsap.to(window, { scrollTo: target, duration: 1 });
+            }
         });
     });
 });
