@@ -40,7 +40,7 @@ body {
 
 .neon-button {
     display: inline-block;
-    padding: 1rem 3rem;
+    padding: 1rem 2rem;
     font-size: 1.2rem;
     color: var(--neon-blue);
     border: 2px solid var(--neon-blue);
@@ -54,6 +54,10 @@ body {
     background-color: var(--neon-blue);
     color: var(--dark-primary);
     box-shadow: 0 0 20px var(--neon-blue), 0 0 30px var(--neon-blue), 0 0 40px var(--neon-blue);
+}
+
+.neon-button i {
+    margin-right: 8px;
 }
 
 .neon-button-active {
