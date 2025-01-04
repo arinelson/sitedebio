@@ -1,0 +1,15 @@
+{
+    "name": "sitedebio",
+    "version": "1.0.0",
+    "description": "Árvore de Links Futurística",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    },
+    "devDependencies": {},
+    "author": "arinelson",
+    "license": "ISC"
+  }

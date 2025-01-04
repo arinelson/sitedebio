@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árvore de Links Futurística</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body class="bg-light-primary text-dark-primary">
+    <header class="flex flex-col items-center justify-center py-8">
+        <div class="relative w-40 h-40 rounded-full neon-border">
+            <img src="https://via.placeholder.com/150" alt="Foto do Usuário" class="w-full h-full rounded-full object-cover profile-pic">
+        </div>
+        <h1 class="mt-4 text-4xl font-bold">Minha Árvore de Links</h1>
+        <button id="toggle-mode" class="absolute top-4 right-4 text-2xl focus:outline-none">
+            <i id="mode-icon" class="fas fa-moon"></i>
+        </button>
+    </header>
+    <main class="container mx-auto mt-12 text-center">
+        <div class="link-tree flex flex-col items-center space-y-6">
+            <a href="https://link1.com" class="neon-button">Link 1</a>
+            <a href="https://link2.com" class="neon-button">Link 2</a>
+            <a href="https://link3.com" class="neon-button">Link 3</a>
+            <a href="https://link4.com" class="neon-button">Link 4</a>
+            <a href="https://link5.com" class="neon-button">Link 5</a>
+            <a href="https://link6.com" class="neon-button">Link 6</a>
+            <a href="https://link7.com" class="neon-button">Link 7</a>
+        </div>
+    </main>
+</body>
+</html>
