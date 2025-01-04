@@ -21,23 +21,23 @@ document.addEventListener('DOMContentLoaded', function() {
             event.preventDefault();  // Impede o redirecionamento imediato
             showNotification(`Você clicou no link para: ${this.innerText}`);
             setTimeout(() => {
-                window.location.href = this.href;  // Redireciona após a notificação
+                window.open(this.href, '_blank');  // Abre o link em uma nova guia
             }, 1000);
         });
     });
 
     // Alterna entre modo escuro e claro
-    const toggleModeBtn = document.createElement('button');
-    toggleModeBtn.innerText = 'Alternar Modo';
-    toggleModeBtn.className = 'btn btn-secondary toggle-mode-btn';
-    document.body.appendChild(toggleModeBtn);
+    const toggleModeBtn = document.getElementById('toggle-mode');
+    const modeIcon = document.getElementById('mode-icon');
 
     toggleModeBtn.addEventListener('click', function() {
         document.body.classList.toggle('dark-mode');
         if (document.body.classList.contains('dark-mode')) {
-            toggleModeBtn.innerText = 'Modo Claro';
+            modeIcon.classList.remove('fa-moon');
+            modeIcon.classList.add('fa-sun');
         } else {
-            toggleModeBtn.innerText = 'Modo Escuro';
+            modeIcon.classList.remove('fa-sun');
+            modeIcon.classList.add('fa-moon');
         }
     });
 });

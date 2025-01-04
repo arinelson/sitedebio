@@ -11,6 +11,25 @@ body.dark-mode {
     color: #f0f0f0;
 }
 
+.header {
+    width: 100%;
+    padding: 1rem 0;
+    background: linear-gradient(45deg, #141E30, #243B55);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
 h1 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -18,16 +37,22 @@ h1 {
 }
 
 .link-tree .btn {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    background: transparent;
+    border: 2px solid #00FFFF; /* Neon color */
+    color: #00FFFF;
     font-size: 1.2rem;
     transition: all 0.3s ease;
+    width: auto;
 }
 
 .link-tree .btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    background: #00FFFF;
+    border: 2px solid #00FFFF;
+    color: #1f1c2c;
+}
+
+.link-tree .btn-neon {
+    box-shadow: 0 0 10px #00FFFF, 0 0 20px #00FFFF, 0 0 30px #00FFFF;
 }
 
 .notification {
@@ -48,10 +73,12 @@ h1 {
 }
 
 .toggle-mode-btn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 1000;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 @media (max-width: 576px) {
